@@ -1,123 +1,121 @@
-/* An asterisk means everything*/
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 * {
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.5em;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: /*Arial, "Times New Roman",*/ sans-serif;
+}
+
+:root {
+    --beige: rgba(245,245,220, 0.7);
+    --red: rgba(255, 233, 232, 0.4);
+    --black: rgba(25, 25, 25, 1);
+    --blue: rgb(0, 119, 181);
+}
+
+.container {
+    font-size: 16px;
+    margin-top: 10vh;
+    overflow-x: hidden;
 }
 
 html {
-    font-size: 16px;
+    font-size: 20px;
+
+    margin-top: 3em;
 }
-/* .box {
-    background-image: url(../images/background.jpg);
-    padding: 100px;
-    margin: 100px;
-} */
+h1 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin: 1vh 0;
+}
 
-.typewriter p {
-    color: #fff;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(0, 4, 255);  /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
-  }
- 
-  /* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(0, 4, 255) }
-  }
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1vh 0;
+}
 
+h3 {
+    text-align: center;
+    vertical-align: text-top;
+    font-size: 1.7rem;
+}
+p {
+    margin: 0 0 1rem;
+}
+
+header,
+main, 
+footer {
+    margin: 0 auto;
+    max-width: 850px;
+    min-width: 320px;
+}
 header {
-    color: #ffff;
-    /* background: url(images/move.gif) no-repeat; */
-     background-size: cover; 
-    /* position: relative; */
-    /* background: #252934;   */
-    background: url(images/background.jpg) no-repeat center center fixed; 
-    /* position: fixed; */
-    border-bottom: 5px solid #34495E;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw; 
-    /* width: 100%; */
-    /* text-align: center; */
+    padding: 2.8em 0;
+    background: var(--red);
+    color: var(--black);
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    font-size: 3rem;
 }
 
-header button {
-    color: #fff;
-    background: transparent;
-    border: 2px solid #fff;
-
-    font-size: 1.618rem;
-    padding: .5rem 1rem;
-
-    margin-top: .8rem;
-
-    transition: 0.4s;
+header img {
+    height: 45vh;
+    border-radius: 20rem;
+    border: blue;
+    padding:1px;
+    border:2px solid #021a40;
 }
 
-header button:hover {
-    background: #09f;
-    border-color: #09f;
+header h1 {
+    font-size: 3em;
 }
 
-/* .highlight {
-    color: magenta;
-} */
+header span {
+    font-size: 1.7em;
+    color: var(--black);
+}
 
-#main-nav {
+nav {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
-    background: #000;
-    text-align: center;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+    background: #333;
 }
 
 nav a {
-    color: #fff;
+    padding: 0.7em 2em;
     text-decoration: none;
-
-    display: inline-block;
-    padding: 0.5rem 1rem;    
+    color: #fff;
 }
 
 nav a:hover {
-    background: var(--light-grey)
+    background: #666;
 }
 
-#main-nav > nav {
-    display: inline-block;
+section {
+    margin: 1em 0;
+
+    padding-top: 3em;
+    min-height: 12em;
 }
 
-#main-nav > nav > div {
-    display: none;
-    background: #111;
-    position: absolute;
-}
-#main-nav > nav > div > a {
-    display: block;
+section > p {
+    margin: 1em 0;
 }
 
-#main-nav > nav:hover > div {
-    display: block;
+section ul {
+    padding-left: 1.5em;
 }
 
 main {
@@ -125,125 +123,228 @@ main {
 }
 
 main section:nth-child(odd) {
-    background: #fff;
+    background: var(--beige);
 }
 
 main section:nth-child(even) {
-    background: #ddd;
+    background: var(--red);
 }
 
 section > * {
     max-width: 850px;
     margin: 1em auto;
 }
-img.myImage {
-    max-width: 30%;
-    height: auto;
-    opacity: 0.7;
-    display: flex;
-    flex-start: left;
-    -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
-    padding: 20em;
+
+/* #aboutMe {
+    background: var(--beige);
+} */
+.Skill-List {
+    display: grid;
+    text-align: center;
 }
+
+.Skill-List u {
+    list-style-type: none;
+}
+
 #projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /*fraction unit*/
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1em;
-}
-
-#projects span {
+  }
+  
+  #projects span {
     display: block;
-}
-
-#projects article {
-    background: #ccc;
+  }
+  
+  #projects article {
+    background: var(--red);
     text-align: center;
     padding: 1em;
-    height: 12em;
-
+    height: 15em;
+    border-radius:1.5vw;
+    color: #fff;
     position: relative;
-
-    display: flex;
+  
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+  
     overflow: hidden;
     cursor: pointer;
-}
+  }
+  
+  #projects article:hover {
+    background: #333;
+    /* background-size: cover; */
 
-#projects article:hover {
-    background: #fff;
-}
-#projects * {
+    
+    
+  }
+  
+  #projects * {
     transition: 0.5s;
-}
-
-#projects article h3,
-#projects article span,
-projects article button {
+  }
+  
+  #projects article h3,
+  #projects article span,
+  #projects article button {
     position: absolute;
     opacity: 0;
-}
-
-#projects article h3 {
+  }
+  
+  #projects article h3 {
     top: -2em;
-}
-#projects article span {
-    top: 0;
-}
-projects article button {
-    bottom: -2em;
-}
+    font-size: 1.5em;
+  }
 
-#projects article:hover h3 {
+  #projects article span {
+    top: 0;
+  }
+  #projects article button {
+    bottom: -2em;
+    border-radius: 2em;
+  }
+
+#projects article button a {
+    text-decoration: none;
+    background: var(--beige);
+}
+  
+  #projects article:hover h3 {
     opacity: 1;
     top: 1em;
-}
-#projects article:hover span {
+  }
+  #projects article:hover span {
     opacity: 1;
     top: 3em;
-}
-projects article:hover button {
+  }
+  #projects article:hover button {
     opacity: 1;
     bottom: 1em;
+  }
+
+#projects article img {
+  display: block;
+  width: 100%;
+  border: 1px solid #333;
+  height: 100%;
 }
 
- a {
-    color: #3B5998;
+#contactMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactMe ul li a{
+    color: var(--blue);
+    text-decoration: none;
+}
+/* footer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: #666;
+    color: #fff;
+    padding: 1 em 0;
+    text-align: center;
+} */
+#footer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: #666;
+    color: #fff;
+    padding: 1 em 0;
+    text-align: center;
+}
+
+#footer  p  a {
+    padding-bottom: 40px;
+    color: var(--beige);
+    font-size: 20px;
+    font-style: inherit;
     text-decoration: none;
 }
 
-/* Style all font awesome icons */
-
-    .fa {
-        padding: 20px;
-        font-size: 30px;
-        width: 1em;
-        text-align: center;
-        text-decoration: none;
+#footer p {
+    text-align: center; 
+    /* display: flex; */
 }
 
-/* Add a hover effect if you want */
-.fa:hover {
-    opacity: 0.7;
+.social-links {
+    list-style:none;
+    margin:0;
+    padding:0;
+    margin-bottom:30px;
+    text-align: center;
+    justify-content: center;
 }
 
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-    background: #3B5998;
-    color: white;
+.social-links li{
+    display:inline-block;
+    margin:0 5px;
+    border-radius:3px;
+    box-shadow:0 4px 0 transparent;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
 }
 
-/* Twitter */
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
+.social-links li a {
+    display:block;
+    color:#fff;
+    font-size:21px;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    background: var(--black);
+    border-radius:50%;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
 }
 
-.fa-linkedin {
-    background: rgb(3, 120, 209);
-    color: white;
+.social-links li a:hover {
+    color:#fff;
+    background: var(--blue);
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 60px;
+
+
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#modal.show {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+#modal > div {
+    background: #4322;
+    border: 3px solid #777;
+    width: 600px;
+    height: 65px;
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+#clickMe {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 32px;
+
+
 }
