@@ -26,6 +26,7 @@ html {
 
     margin-top: 3em;
 }
+
 h1 {
     font-size: 2.5rem;
     color: var(--black);
@@ -254,8 +255,11 @@ section > * {
     flex-direction: column;
     align-items: center;
 }
-
-#contactMe ul li a{
+#contactMe ul span{
+    color: var(--black);
+}
+#contactMe li,
+#contactMe a{
     color: var(--blue);
     text-decoration: none;
 }
