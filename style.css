@@ -13,11 +13,12 @@
     --black: rgba(25, 25, 25, 1);
     --blue: rgb(0, 119, 181);
     --green: rgb(143,188,143, 1);
+    --pink: rgba(170, 0, 120, 1);
 }
 
 .container {
     font-size: 16px;
-    margin-top: 10vh;
+    margin-top: 1vh;
     overflow-x: hidden;
 }
 
@@ -328,6 +329,11 @@ section > * {
 .social-links li a:hover {
     color:#fff;
     background: var(--blue);
+}
+
+.social-links li a:active {
+    color:#fff;
+    background: var(--pink);
 }
 
 #modal {
