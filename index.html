@@ -16,7 +16,6 @@
         <div id="modal">
                 Welcome to my portfolio!
         </div>
-    <script src="./script.js"></script>
    <div class="container">
     <header>
         <img src="./images/my_image.jpg" class="w3-rounds" alt="Satavisha Roy's image">
@@ -26,57 +25,85 @@
     
     <main>
         <section id ="aboutMe">
-            <h2>About Me</h2>
-                <h3>Bio</h3>
-                <p>Enthusiastic scientist with 10+ years of extensive 
+            <div class = "aboutSection">
+                <h2>About Me</h2>
+                    <h3>Bio</h3>
+                    <p>Enthusiastic scientist with 10+ years of extensive 
                     hands-on multidisciplinary research. A creative
                      problem solver seeking a collaborative environment to 
                      expand and implement fullstack development skill set 
                      within the field of technology.</p>
-            <div class="Skill-List">
-                <h3>Here are my skills</h3>
-                    <ul style="list-style-type:none">
-                        <li>Java</li>
-                        <li>Spring/Spring Boot</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>SQL Databases</li>
-                    </ul>
-            </div>
-            
+                    <button id="open-modal">Click here to know more</button>
+                    <div id="modal-screen">
+                        <div id="modal-box">
+                            <h2>
+                                My other interests
+                                <button id="close-modal">X</button>
+                            </h2>
+                                <div class="interestGrid">
+                                    <div class="grid-item1">
+                                        <img src="./images/odissi.jpg">
+                                        <span>Odissi dance</span>
+                                    </div>
+                                    <div class="grid-item2">
+                                        <img src="./images/st_louis..jpg">
+                                        <span>Traveling</span>
+                                    </div>
+                                    <div class="grid-item3">
+                                        <img src="./images/crafts.jpg">
+                                        <span>Painting</span>
+                                    </div>
+                                 </div>
+                        </div>  
+                    </div>
+                 <div class="Skill-List">
+                    <h3>Here are my skills</h3>
+                        <ul style="list-style-type:none">
+                            <li>Java</li>
+                            <li>Spring/Spring Boot</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>SQL Databases</li>
+                        </ul>
+                </div>
+            </div>     
         </section>
         <section id="myProjects">
-            <h2>Projects</h2>
-                <div id="projects">
-                    <article class="project">
-                        <h3>Virtual Pets Amok</h3>
-                        <img src="./images/virtualpets.jpg">
-                        <span>Java</span>
-                        <button><a target=_blank href="https://github.com/zinc0des/virtual-pets-amok">Learn More</a></button>
-                    </article>
-                    <article class="project">
-                        <h3>Fortune Teller</h3>
-                        <img src="./images/fortune-teller-small.jpg">
-                        <span>Java</span>
-                        <button><a target=_blank href="https://github.com/zinc0des/FortuneTeller">Learn More</a><button>
-                    </article>
-                    <article class="project">
-                        <h3>Reviews Site</h3>
-                        <img src="./images/reviews.jpg">
-                        <span>Java + Spring MVC</span>
-                        <button><a target=_blank href="https://github.com/zinc0des/reviews">Learn More</a></button>
-                    </article>
-                </div>
+            <div class = "projectSection">
+                <h2>Projects</h2>
+                    <div id="projects">
+                        <article class="project">
+                            <h3>Virtual Pets Amok</h3>
+                             <img src="./images/virtualpets.jpg">
+                             <span>Java</span>
+                             <button><a target=_blank href="https://github.com/zinc0des/virtual-pets-amok">Learn More</a></button>
+                        </article>
+                        <article class="project">
+                            <h3>Fortune Teller</h3>
+                            <img src="./images/fortune-teller-small.jpg">
+                            <span>Java</span>
+                            <button><a target=_blank href="https://github.com/zinc0des/FortuneTeller">Learn More</a><button>
+                        </article>
+                        <article class="project">
+                            <h3>Reviews Site</h3>
+                            <img src="./images/reviews.jpg">
+                            <span>Java + Spring MVC</span>
+                            <button><a target=_blank href="https://github.com/zinc0des/reviews">Learn More</a></button>
+                        </article>
+                    </div>
+            </div>
         </section>
         <section id="contactMe">
+            <div class="contactSection">
                 <h2>Contact</h2>
-                <p>Get in Touch</p>
+                   <p>Get in Touch</p>
                    <p>I would be happy to discuss how I can meet your business needs!</p>
-                   <ul style="list-style-type:none">
-                        <li><span>Email: </span><a href="mailto:satavishaDOTroyATgmailDOTcom">satavisharoy@email.com</a></li>
-                        <li><span>Phone: </span>(740) 566-4544</li>
-                    </ul>  
+                        <ul style="list-style-type:none">
+                            <li><span>Email: </span><a href="mailto:satavishaDOTroyATgmailDOTcom">satavisharoy@email.com</a></li>
+                            <li><span>Phone: </span>(740) 566-4544</li>
+                        </ul>
+            </div>  
         </section>
     </main>
 
@@ -103,6 +130,6 @@
 			</div>
 			
         </footer>
-    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
