@@ -37,5 +37,4 @@ const closeModal = function() {
   openModalBtn.addEventListener('click', openModal);
   closeModalBtn.addEventListener('click', closeModal);
   
- 
-
+  
