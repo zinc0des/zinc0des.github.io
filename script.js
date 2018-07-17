@@ -28,7 +28,7 @@ const openModalBtn = document.getElementById('open-modal');
 const closeModalBtn = document.getElementById('close-modal');
 
 const openModal = function() {
-    document.main.classList.add('modal-open');
+    document.body.classList.add('modal-open');
 };
 const closeModal = function() {
     document.body.classList.remove('modal-open');
@@ -37,4 +37,11 @@ const closeModal = function() {
   openModalBtn.addEventListener('click', openModal);
   closeModalBtn.addEventListener('click', closeModal);
   
+ const modalScreen = document.getElementById('modal-screen');
+ modalScreen.addEventListener('click', closeModal);
+
+ const modalBox = document.getElementById('modal-box');
+ modalBox.addEventListener('click', function(event) {
+     event.stopPropagation();
+ });
   
