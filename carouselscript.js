@@ -32,7 +32,7 @@
     // Create the <img> element
     let imgUrl = slides[i];
     const img = document.createElement('img');
-    img.setAttribute('src', './images/ + {imgUrl}');
+    img.setAttribute('src', './images/' + imgUrl);
     imgs.appendChild(img);
 
     // When preview is clicked, display that image
