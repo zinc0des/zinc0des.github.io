@@ -2,13 +2,13 @@
   
     // Array of image URLs to display
     const slides = [
-      'fortuneteller_shot.jpg',
-      'petsrunamok_shot.jpg',
-      'shopping-cart_shot.jpg',
-      'customer_shot.jpg',
-      'bank-teller-shot.jpg',
-      'courses-topics-textbooks-shot.jpg',
-      'reviews_pop_shot.jpg' 
+      '/fortuneteller_shot.jpg',
+      '/petsrunamok_shot.jpg',
+      '/shopping-cart_shot.jpg',
+      '/customer_shot.jpg',
+      '/bank-teller-shot.jpg',
+      '/courses-topics-textbooks-shot.jpg',
+      '/reviews_pop_shot.jpg',
     ];
   
     // Index of currently displayed URL
