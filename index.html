@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,29 +11,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
-        <button id="clickMe">Click Here!</button>
-    
-        <div id="modal">
-                Welcome to my portfolio!
-        </div>
-   <div class="container">
-    <header>
-        <img src="./images/my_image.jpg" class="w3-rounds" alt="Satavisha Roy's image">
-        <h1>Satavisha Roy</h1>
-        <span>Fullstack Developer. Scientist. Amateur Photographer.</span>
-    </header> 
-    
-    <main>
-        <section id ="aboutMe">
-            <div class = "aboutSection">
-                <h2>About Me</h2>
+    <button id="clickMe">Click Here!</button>
+
+    <div id="modal">
+        Welcome to my portfolio!
+    </div>
+    <div class="container">
+        <header>
+            <img src="./images/my_image.jpg" class="w3-rounds" alt="Satavisha Roy's image">
+            <h1>Satavisha Roy</h1>
+            <span>Fullstack Developer. Scientist. Amateur Photographer.</span>
+        </header>
+
+        <main>
+            <section id="aboutMe">
+                <div class="aboutSection">
+                    <h2>About Me</h2>
                     <h3>Bio</h3>
-                    <p>Enthusiastic scientist with 10+ years of extensive 
-                    hands-on multidisciplinary research. A creative
-                     problem solver seeking a collaborative environment to 
-                     expand and implement fullstack development skill set 
-                     within the field of technology.</p>
+                    <p>Enthusiastic scientist with 10+ years of extensive hands-on multidisciplinary research. A creative problem
+                        solver seeking a collaborative environment to expand and implement fullstack development skill set
+                        within the field of technology.</p>
                     <button id="open-modal">Click here to know more</button>
                     <div id="modal-screen">
                         <div id="modal-box">
@@ -40,24 +40,24 @@
                                 My other interests
                                 <button id="close-modal">&times;</button>
                             </h2>
-                                <div class="interestGrid">
-                                    <div class="grid-item1">
-                                        <img src="./images/odissi.jpg">
-                                        <span>Odissi dance</span>
-                                    </div>
-                                    <div class="grid-item2">
-                                        <img src="./images/st_louis..JPG">
-                                        <span>Traveling</span>
-                                    </div>
-                                    <div class="grid-item3">
-                                        <img src="./images/crafts.JPG">
-                                        <span>Painting</span>
-                                    </div>
-                                 </div>
-                        </div>  
+                            <div class="interestGrid">
+                                <div class="grid-item1">
+                                    <img src="./images/odissi.jpg">
+                                    <span>Odissi dance</span>
+                                </div>
+                                <div class="grid-item2">
+                                    <img src="./images/st_louis..JPG">
+                                    <span>Traveling</span>
+                                </div>
+                                <div class="grid-item3">
+                                    <img src="./images/crafts.JPG">
+                                    <span>Painting</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                 <div class="Skill-List">
-                    <h3>Here are my skills</h3>
+                    <div class="Skill-List">
+                        <h3>Here are my skills</h3>
                         <ul style="list-style-type:none">
                             <li>Java</li>
                             <li>Spring/Spring Boot</li>
@@ -66,80 +66,106 @@
                             <li>JavaScript</li>
                             <li>SQL Databases</li>
                         </ul>
+                    </div>
                 </div>
-            </div>     
-        </section>
-        <section id="myProjects">
-            <div class = "projectSection">
-                <h2>Projects</h2>
+            </section>
+            <section id="myProjects">
+                <div class="projectSection">
+                    <h2>Projects</h2>
                     <div id="projects">
                         <article class="project">
                             <h3>Virtual Pets Amok</h3>
-                             <img src="./images/virtualpets.jpg">
-                             <span>Java</span>
-                             <button><a target=_blank href="https://github.com/zinc0des/virtual-pets-amok">Learn More</a></button>
+                            <img src="./images/virtualpets.jpg">
+                            <span>Java</span>
+                            <button>
+                                <a target=_blank href="https://github.com/zinc0des/virtual-pets-amok">Learn More</a>
+                            </button>
                         </article>
                         <article class="project">
                             <h3>Fortune Teller</h3>
                             <img src="./images/fortune-teller-small.jpg">
                             <span>Java</span>
-                            <button><a target=_blank href="https://github.com/zinc0des/FortuneTeller">Learn More</a><button>
+                            <button>
+                                <a target=_blank href="https://github.com/zinc0des/FortuneTeller">Learn More</a>
+                                <button>
                         </article>
                         <article class="project">
                             <h3>Reviews Site</h3>
                             <img src="./images/reviews.jpg">
                             <span>Java + Spring MVC</span>
-                            <button><a target=_blank href="https://github.com/zinc0des/reviews">Learn More</a></button>
+                            <button>
+                                <a target=_blank href="https://github.com/zinc0des/reviews">Learn More</a>
+                            </button>
                         </article>
                     </div>
+                </div>
+            </section>
+            <section id="carousel">
+                <h3>Image Carousel</h3>
+                <div class="carousel">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                    <div class="view"></div>
+                    <div class="imgs"></div>
+                </div>
+            </section>
+            <section id="contactMe">
+                <div class="contactSection">
+                    <h2>Contact</h2>
+                    <p>Get in Touch</p>
+                    <p>I would be happy to discuss how I can meet your business needs!</p>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <span>Email: </span>
+                            <a href="mailto:satavishaDOTroyATgmailDOTcom">satavisharoy@email.com</a>
+                        </li>
+                        <li>
+                            <span>Phone: </span>(740) 566-4544</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <nav>
+            <a href="#aboutMe">About Me</a>
+            <a href="#myProjects">Projects</a>
+            <a href="#contactMe">Contact</a>
+        </nav>
+
+        <footer id="footer" class="add-padding border-top-color2">
+
+            <div class="container">
+
+                <p>
+                    <a href="https://portfolium.com/SatavishaRoy" target="_blank">VISIT MY BLOG</a>
+                </p>
+                <br>
+
+                <ul class="social-links text-center">
+                    <li>
+                        <a href="https://github.com/zinc0des" target="_blank">
+                            <i class="fa fa-github fa-fw"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/u/0/112478584973404061726" target="_blank">
+                            <i class="fa fa-google-plus fa-fw"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/satavisharoy" target="_blank">
+                            <i class="fa fa-linkedin fa-fw"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="text-center">&copy; 2018 - Satavisha Roy</p>
+
             </div>
-        </section>
-        <section id="carousel">
-        <h3>Image Carousel</h3>
-        <div class="carousel">
-          <div class="prev"></div>
-          <div class="next"></div>
-          <div class="view"></div>
-          <div class="imgs"></div>
-        </div>
-        </section>
-        <section id="contactMe">
-            <div class="contactSection">
-                <h2>Contact</h2>
-                   <p>Get in Touch</p>
-                   <p>I would be happy to discuss how I can meet your business needs!</p>
-                        <ul style="list-style-type:none">
-                            <li><span>Email: </span><a href="mailto:satavishaDOTroyATgmailDOTcom">satavisharoy@email.com</a></li>
-                            <li><span>Phone: </span>(740) 566-4544</li>
-                        </ul>
-            </div>  
-        </section>
-    </main>
 
-    <nav>
-        <a href="#aboutMe">About Me</a>
-        <a href="#myProjects">Projects</a>
-        <a href="#contactMe">Contact</a>
-    </nav>
-
-    <footer id="footer" class="add-padding border-top-color2">
-		
-			<div class="container">
-
-				<p><a href="https://portfolium.com/SatavishaRoy" target="_blank">VISIT MY BLOG</a></p><br>
-			
-				<ul class="social-links text-center">
-					<li><a href="https://github.com/zinc0des" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
-					<li><a href="https://plus.google.com/u/0/112478584973404061726" target="_blank"><i class="fa fa-google-plus fa-fw"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/satavisharoy" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
-				</ul>
-			
-				<p class="text-center">&copy; 2018 - Satavisha Roy</p>
-			
-			</div>
-			
         </footer>
-    <script src="./script.js"></script>
-    <script src="./carouselscript.js"></script>
+        <script src="./script.js"></script>
+        <script src="./carouselscript.js"></script>
 </body>
+
 </html>
