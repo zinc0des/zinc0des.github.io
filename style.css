@@ -326,11 +326,11 @@ section > * {
         display: block;
     }
     
-    #projectDetailsDiv p {
+    .projectDetailsDiv p {
         display: none;
     }
 
-    #projectDetailsDiv.expanded p {
+    .projectDetailsDiv.expanded p {
         display: block;
     }
 }

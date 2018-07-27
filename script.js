@@ -11,7 +11,7 @@ function showModal() {
     modal.onclick = closedModal;
 
     const modalContent = document.querySelector('#modal > div');
-    modalContent.onclick = function(event) {
+    modalContent.onclick = function (event) {
         console.log(event);
         event.stopPropagation();
     };
@@ -27,48 +27,49 @@ clickMe.onclick = showModal;
 const openModalBtn = document.getElementById('open-modal');
 const closeModalBtn = document.getElementById('close-modal');
 
-const openModal = function() {
+const openModal = function () {
     document.body.classList.add('modal-open');
 };
-const closeModal = function() {
+const closeModal = function () {
     document.body.classList.remove('modal-open');
-  };
-  
-  openModalBtn.addEventListener('click', openModal);
-  closeModalBtn.addEventListener('click', closeModal);
-  
- const modalScreen = document.getElementById('modal-screen');
- modalScreen.addEventListener('click', closeModal);
+};
 
- const modalBox = document.getElementById('modal-box');
- modalBox.addEventListener('click', function(event) {
-     event.stopPropagation();
- });
-  
-  // Navigation menu can be toggled
-  function addNavEventListeners() {
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);
+
+const modalScreen = document.getElementById('modal-screen');
+modalScreen.addEventListener('click', closeModal);
+
+const modalBox = document.getElementById('modal-box');
+modalBox.addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+
+// Navigation menu can be toggled
+function addNavEventListeners() {
 
     const nav = document.querySelector('nav');
 
-    const navClickHandler = function() {
-      this.classList.toggle('open');
-      event.stopPropagation();
+    const navClickHandler = function () {
+        this.classList.toggle('open');
+        event.stopPropagation();
     };
 
     nav.addEventListener('click', navClickHandler);
 
-    const bodyClickHandler = function() {
-      nav.classList.remove('open');
+    const bodyClickHandler = function () {
+        nav.classList.remove('open');
     };
 
     document.body.addEventListener('click', bodyClickHandler);
-  };
+};
 
-  function addArticleEventListeners() {
+  // Project details can be expanded
+function addArticleEventListeners() {
 
-    const projTexts = document.querySelectorAll('#projectDetailsDiv');
+    const projTexts = document.querySelectorAll('.projectDetailsDiv');
 
-   for (let projText of projTexts) {
+    for (let projText of projTexts) {
         let button = projText.querySelectorAll('.showDetails');
 
         button.addEventListener('click', function () {
@@ -78,4 +79,3 @@ const closeModal = function() {
         });
     };
 };
-  
