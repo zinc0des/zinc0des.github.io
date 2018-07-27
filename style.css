@@ -14,6 +14,7 @@
     --blue: rgb(0, 119, 181);
     --green: rgb(143,188,143, 1);
     --pink: rgba(170, 0, 120, 1);
+     
 }
 
 .container {
@@ -111,6 +112,35 @@ nav a:hover {
     background: #666;
 }
 
+@media screen and (max-width: 750px) {
+
+    nav {
+      display: flex;
+      flex-flow: column;
+    }
+    nav a {
+      display: none;
+    }
+    nav::before {
+      content: 'SHOW MENU';
+      color: #fff;
+      background: #000;
+      font-weight: bold;
+      padding: 0.5em 2em;
+    }
+    nav.open::before {
+      content: 'HIDE MENU';
+    }
+    nav.open a {
+      display: block;
+    }
+  
+    nav ::selection {
+      color: inherit;
+      background: transparent;
+    }
+  }
+
 section {
     margin: 1em 0;
 
@@ -168,26 +198,32 @@ section > * {
   #projects span {
     display: block;
   }
+
+  .project {
+      display: flex;
+      flex-direction: column;
+  }
   
-  #projects article {
+  .projectButtonDiv {
     background: var(--red);
     text-align: center;
     padding: 1em;
+    padding-bottom: 10%;
     height: 15em;
-    border-radius:1.5vw;
+    border-radius:1vw;
     color: #fff;
     position: relative;
-  
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* flex-wrap: wrap; */
   
-    overflow: hidden;
+    /* overflow: hidden; */
     cursor: pointer;
   }
-  
-  #projects article:hover {
+ 
+  .projectButtonDiv:hover {
     background: #333;
     /* background-size: cover; */   
   }
@@ -196,59 +232,72 @@ section > * {
     transition: 0.5s;
   }
   
-  #projects article h3,
-  #projects article span,
-  #projects article button {
+  .projectButtonDiv h3,
+  .projectButtonDiv span,
+    .gitlink {
     position: absolute;
     opacity: 0;
+    /* display: block; */
   }
+
   
-  #projects article h3 {
+  .projectButtonDiv h3 {
     top: -2em;
+   
     font-size: 1.5em;
   }
 
-  #projects article span {
-      display: block;
-    margin-top: 0.7em;
+  .projectButtonDiv span {
+    /* display: block; */
+    top: 0.7em;
   }
-  #projects article button {
+  /* #projects article button { */
+    .gitlink { 
     bottom: -2em;
     border-radius: 2em;
     background: var(--green);
   }
 
-#projects article button a {
+ .showDetails {
+    display: block;
+}
+  /* .showDetails p {
+      display: block;
+      bottom: -2em;
+  } */
+
+ .gitlink a {
     text-decoration: none;
     font-weight: bold;
     /* background: var(--green); */
 }
   
-  #projects article:hover h3 {
+  .projectButtonDiv:hover h3 {
     opacity: 1;
     top: 1em;
   }
-  #projects article:hover span {
+  .projectButtonDiv:hover span {
     opacity: 1;
     top: 3em;
   }
-  #projects article:hover button {
+  .projectButtonDiv:hover .gitlink {
     opacity: 1;
     bottom: 1em;
   }
 
-  #projects article button a:visited
+  .gitlink a:visited
 {
    color: #161413;
    text-decoration: none;
    font-weight: bold;
 }
-.project:hover img {
+
+.projectButtonDiv:hover img {
     opacity: 0.3;
     background: #161413;
 }
 
-#projects article img {
+.projectButtonDiv img {
   display: block;
   width: 100%;
   border: 1px solid #333;
@@ -257,6 +306,41 @@ section > * {
   image-rendering: crisp-edges;
   image-rendering: pixelated;
 }
+
+.showDetails {
+    display: none;
+    margin-block-end: 1.4em;
+}
+
+@media screen and (max-width: 500px) {
+    #projects {
+      grid-template-columns: 1fr;
+      grid-row-gap: 1em;
+      
+      width: 60vw;
+      min-width: 22em;
+      margin: 1em auto;
+    }
+   
+    .showDetails {
+        display: block;
+    }
+    
+    #projectDetailsDiv p {
+        display: none;
+    }
+
+    #projectDetailsDiv.expanded p {
+        display: block;
+    }
+}
+  
+  @media screen and (max-width: 25em) {
+    #projects {
+      width: auto;
+      min-width: unset;
+    }
+  }
 
 .contactSection {
     display: flex;
@@ -337,7 +421,7 @@ section > * {
 
 .social-links li a:hover {
     color:#fff;
-    background: var(--blue);
+    background: var(--pink);
 }
 
 .social-links li a:active {
@@ -548,3 +632,8 @@ section > * {
     margin: 0 10px;
   }
   
+  @media screen and (max-width: 545px) {
+      .carousel {
+          width: 90%;
+      }
+  }

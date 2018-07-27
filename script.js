@@ -45,3 +45,37 @@ const closeModal = function() {
      event.stopPropagation();
  });
   
+  // Navigation menu can be toggled
+  function addNavEventListeners() {
+
+    const nav = document.querySelector('nav');
+
+    const navClickHandler = function() {
+      this.classList.toggle('open');
+      event.stopPropagation();
+    };
+
+    nav.addEventListener('click', navClickHandler);
+
+    const bodyClickHandler = function() {
+      nav.classList.remove('open');
+    };
+
+    document.body.addEventListener('click', bodyClickHandler);
+  };
+
+  function addArticleEventListeners() {
+
+    const projTexts = document.querySelectorAll('#projectDetailsDiv');
+
+   for (let projText of projTexts) {
+        let button = projText.querySelectorAll('.showDetails');
+
+        button.addEventListener('click', function () {
+            projText.classList.toggle('expanded');
+            button.innerHTML = projText.classList.contains('expanded') ?
+                'Hide Details' : 'Show Details';
+        });
+    };
+};
+  
