@@ -46,6 +46,7 @@ modalBox.addEventListener('click', function (event) {
 });
 
 // Navigation menu can be toggled
+addNavEventListeners();
 function addNavEventListeners() {
 
     const nav = document.querySelector('nav');
@@ -64,13 +65,14 @@ function addNavEventListeners() {
     document.body.addEventListener('click', bodyClickHandler);
 };
 
+addArticleEventListeners();
   // Project details can be expanded
 function addArticleEventListeners() {
 
     const projTexts = document.querySelectorAll('.projectDetailsDiv');
 
     for (let projText of projTexts) {
-        let button = projText.querySelectorAll('.showDetails');
+        let button = projText.querySelector('.showDetails');
 
         button.addEventListener('click', function () {
             projText.classList.toggle('expanded');
@@ -79,3 +81,23 @@ function addArticleEventListeners() {
         });
     };
 };
+
+
+// Resizing the window resets open/closed product details
+  // Resizing the window resets nav visibility
+  function addWindowEventListeners() {
+
+    const windowResizeHandler = function() {
+
+      const nav = document.querySelector('nav');
+      nav.classList.remove('open');
+
+      const articles = document.querySelectorAll('#projects article');
+      
+      for (let article of articles) {
+        article.classList.remove('expanded');
+      }
+    };
+
+    window.addEventListener('resize', windowResizeHandler); 
+  }
